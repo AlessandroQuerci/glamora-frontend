@@ -14,9 +14,8 @@ const Services = () => {
   const [alertVariant, setAlertVariant] = useState("success");
   const [isLoading, setIsLoading] = useState(false);
   const [services, setServices] = useState([]);
-  const [currentServiceId, setCurrentServiceId] = useState(null); // Nuovo stato per l'ID corrente
+  const [currentServiceId, setCurrentServiceId] = useState(null);
 
-  // Sostituisci con l'ID reale del tuo negozio
   const shopId = useSelector((state) => state.shop.id);
   const token = useSelector((state) => state.user.token);
 
@@ -32,7 +31,6 @@ const Services = () => {
     price: "",
   });
 
-  // Fetch dei servizi al montaggio del componente
   useEffect(() => {
     fetchServices();
   }, []);
@@ -63,7 +61,7 @@ const Services = () => {
   };
 
   const handleOpenEditModal = (service) => {
-    setCurrentServiceId(service.id); // Imposta l'ID corrente
+    setCurrentServiceId(service.id);
     setEditService({
       name: service.name,
       duration: service.duration,
@@ -74,7 +72,7 @@ const Services = () => {
 
   const handleCloseEditModal = () => {
     setShowEditModal(false);
-    setCurrentServiceId(null); // Resetta l'ID corrente
+    setCurrentServiceId(null);
   };
 
   const handleInputChange = (e) => {
@@ -127,7 +125,7 @@ const Services = () => {
 
   const handleEditSubmit = async (e) => {
     e.preventDefault();
-    if (!currentServiceId) return; // Assicurati che l'ID sia presente
+    if (!currentServiceId) return;
 
     setIsLoading(true);
 
@@ -140,7 +138,7 @@ const Services = () => {
         },
         body: JSON.stringify({
           ...editService,
-          id: currentServiceId, // Includi l'ID nel payload
+          id: currentServiceId,
           shopId: shopId,
         }),
       });

@@ -19,14 +19,6 @@ const HeroSection = () => {
           <div className="w-100 w-xl-50 d-flex flex-column justify-content-center align-items-center  align-items-xl-start">
             <h2 className="d-none d-xl-block text-black font-hero  display-1  py-3 ">Ogni secondo conta, rendilo impeccabile...</h2>
             <p className="text-black  fs-5 py-2">Scopri l'universo Glamora e i partner affiliati...</p>
-            {/* <div className="d-flex justify-content-between pt-2 align-middle">
-              <Button className="btn btn-dark rounded-pill  fs-5 me-2 btn-nav" id="heroButtons">
-                Cose che tutti ci chiedono?
-              </Button>
-              <Button className="btn btn-dark rounded-pill  fs-5 me-2 btn-nav" id="heroButtons">
-                Accedi al portale
-              </Button>
-            </div> */}
           </div>
         </div>
         <div className="d-none d-xl-flex  w-50  p-5">

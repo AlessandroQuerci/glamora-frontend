@@ -46,7 +46,7 @@ const Login = () => {
       const responseData = await response.text();
       const data = responseData ? JSON.parse(responseData) : null;
 
-      console.log("Dati ricevuti dal backend:", data); // <-- Aggiungi questo log
+      console.log("Dati ricevuti dal backend:", data);
 
       if (!response.ok) {
         throw new Error(data?.message || "Errore durante il login");

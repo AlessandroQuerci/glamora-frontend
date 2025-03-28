@@ -76,7 +76,6 @@ const AdministratorSettings = () => {
 
       const updatedData = await response.json();
 
-      // Aggiorna lo stato locale
       setUserData((prev) => ({
         ...prev,
         name: updatedData.name,

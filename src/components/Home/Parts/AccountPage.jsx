@@ -10,10 +10,8 @@ const AccountPage = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [error, setError] = useState(null);
 
-  // Prendi i dati dallo state Redux (sola lettura)
   const { user: currentUser, token } = useSelector((state) => state.user);
 
-  // Stato per i dati modificabili (inizializzato con i valori correnti)
   const [userData, setUserData] = useState({
     id: currentUser.id,
     name: currentUser.name || "",
@@ -24,7 +22,6 @@ const AccountPage = () => {
 
   const [selectedFile, setSelectedFile] = useState(null);
 
-  // Funzione per gestire l'URL dell'immagine
   const getImageUrl = (url) => {
     if (!url) return null;
     if (url.startsWith("blob:")) return url;
@@ -33,7 +30,6 @@ const AccountPage = () => {
   };
 
   const handleOpenModal = () => {
-    // Resetta i dati del form ai valori originali quando si apre il modal
     setUserData({
       id: currentUser.id,
       name: currentUser.name || "",
@@ -96,7 +92,6 @@ const AccountPage = () => {
 
       const updatedData = await response.json();
 
-      // Aggiorna SOLO lo stato locale (non Redux)
       setUserData((prev) => ({
         ...prev,
         name: updatedData.name,

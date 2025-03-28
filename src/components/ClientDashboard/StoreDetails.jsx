@@ -15,7 +15,6 @@ const StoreDetails = () => {
   const token = useSelector((state) => state.user.token);
   const userId = useSelector((state) => state.user.user.id);
 
-  // Stati per il flusso di prenotazione
   const [services, setServices] = useState([]);
   const [selectedService, setSelectedService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -25,7 +24,6 @@ const StoreDetails = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
 
-  // Fetch dati negozio
   useEffect(() => {
     const fetchShopData = async () => {
       try {
@@ -47,7 +45,6 @@ const StoreDetails = () => {
     fetchShopData();
   }, [shopId]);
 
-  // Fetch servizi disponibili
   const fetchServices = async () => {
     try {
       const response = await fetch(`http://localhost:8080/api/shops/${shopId}/services`, {
@@ -63,7 +60,6 @@ const StoreDetails = () => {
     }
   };
 
-  // Fetch slot disponibili
   const fetchAvailableSlots = async () => {
     if (!selectedService || !selectedDate || selectedShift === null) return;
 
@@ -90,26 +86,20 @@ const StoreDetails = () => {
     }
   };
 
-  // Effetto per caricare i servizi quando si apre il modale
   useEffect(() => {
     if (showModal) {
       fetchServices();
     }
   }, [showModal]);
 
-  // Effetto per caricare gli slot quando si seleziona data e turno
   useEffect(() => {
     if (selectedDate && selectedShift !== null) {
       fetchAvailableSlots();
     }
   }, [selectedDate, selectedShift]);
 
-  // Gestione prenotazione finale
   const handleFinalBooking = async () => {
     try {
-      // Qui dovresti ottenere l'ID dell'utente loggato
-      // Sostituisci con l'ID reale dell'utente
-
       const dateTime = new Date(selectedDate);
       const [hours, minutes] = selectedTime.split(":");
       dateTime.setHours(parseInt(hours));

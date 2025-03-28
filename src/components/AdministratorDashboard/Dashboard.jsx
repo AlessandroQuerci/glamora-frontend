@@ -20,7 +20,7 @@ const Dashboard = () => {
           </Col>
           <Col xs={12} md={11}>
             <Routes>
-              <Route path="bookings" element={<Bookings />} />
+              <Route path="bookings/*" element={<Bookings />} />
               <Route path="services" element={<Services />} />
               <Route path="clients" element={<Clients />} />
               <Route path="store" element={<Store />} />
