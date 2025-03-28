@@ -54,6 +54,8 @@ Database: PostgreSQL
 
 🌐 Sito Web: https://glamoramanagement.netlify.app
 
+Link al BackEnd : https://github.com/AlessandroQuerci/glamora-backend.git
+
 Glamora non è solo un gestionale, è il futuro della barbieria! 💈⚡
 🔹 Moderno
 🔹 Intuitivo
