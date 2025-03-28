@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #121212;
+}
+
+.text-glamora {
+  color: #0d0521;
+}
+
+.bg-glamora {
+  background-color: #121212;
+}
+
+.bg-main {
+  background-color: #3b3b41;
+}
+
+.bg-glamora-2 {
+  background-color: #2a2a2a;
+}
+.bg-glamora-3 {
+  background-color: #6a6a6a;
+}
+
+#logo {
+  width: 20%;
+}
+
+@media (max-width: 767.98px) {
+  #logo {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  #logo {
+    width: 70%;
+  }
+}
+
+.font-glamora {
+  font-family: "Playfair Display", serif;
+}
+
+.font-glamora-italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.font-hero {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-navbar {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-links:hover {
+  border-bottom: 3px solid white !important;
+}
+
+.custom-border {
+  border-right: 2px solid white;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.btn-nav:hover {
+  background-color: white;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.1s ease;
+}
+
+.no-border {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.no-border::after {
+  display: none !important;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  border: none;
+}
+
+.dropdown-item:hover {
+  color: black !important;
+}
+
+.dropdown-item:active {
+  background-color: white !important;
+}
+
+.nav-border-bottom {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: solid 0.5px rgb(161, 161, 161) !important;
+}
+
+.h-30 {
+  height: 30% !important;
+}
+
+.h-70 {
+  height: 70% !important;
+}
+
+#heroGrid {
+  height: 70vh;
+  width: 70vh;
+}
+
+#heroGrid img:hover {
+  background-color: white;
+  box-shadow: 0 0 15px 1px rgba(101, 101, 101, 0.7);
+  transition: box-shadow 0.1s ease;
+  transition: transform 0.1s ease;
+}
+
+.fs-icons {
+  font-size: 7rem !important;
+}
+.fs-icons-md {
+  font-size: 4rem !important;
+}
+.fs-icons-sm {
+  font-size: 2rem !important;
+}
+.fs-icons-2 {
+  font-size: 9rem !important;
+}
+
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+#heroButtons:hover {
+  color: black;
+
+  box-shadow: 0 0 15px 5px rgba(230, 230, 230, 0.7);
+  transition: box-shadow 0.1s ease;
+}
+#heroButtons:active {
+  background-color: white;
+}
+
+#reviewImage {
+  width: 200px;
+  height: 200px;
+}
+
+#profileImageHome {
+  width: 30px;
+  height: 30px;
+}
+
+#custom-input:focus {
+  border: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 0 32px 4px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+#dashClientNegozio {
+  width: 100px;
+  height: 100px;
+}
+
+#negozioSearch:hover {
+  background-color: #373737;
+}
+
+#clientCard {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#clientCard:hover {
+  background-color: rgb(183, 5, 5) !important;
+}
+
+#storePhoto {
+  width: 200px;
+  height: 200px;
+}
+
+#deleteService:hover {
+  color: red !important;
+}
